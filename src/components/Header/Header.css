@@ -1,0 +1,69 @@
+/* Header with logo and profile button */
+.homepage-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 12px; /* Reduced padding to fit smaller height */
+    background-color: #2b1a0f;
+    border-bottom: 2px solid #d4a017;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+    position: fixed; /* Changed from sticky to fixed */
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 36px; /* Set explicit height to 60% of ~60px */
+    z-index: 100;
+}
+
+/* Logo styling */
+.logo {
+    height: 24px; /* Reduced to fit new header height (60% of 40px) */
+    width: auto;
+    object-fit: contain;
+}
+
+/* Profile button styling */
+.profile-button {
+    color: #f4e4bc; /* Amber color to match the theme */
+    font-size: 24px; /* Size of the icon */
+    padding: 8px; /* Smaller padding for the icon */
+    border-radius: 8px;
+    transition: color 0.3s ease;
+}
+
+.profile-button:hover {
+    color: #d4a017; /* Gold on hover */
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+    .homepage-header {
+        padding: 5px 10px; /* Slightly smaller padding on tablets */
+        height: 32px; /* Slightly smaller height on tablets */
+    }
+
+    .logo {
+        height: 30px; /* 60% of 35px */
+    }
+
+    .profile-button {
+        font-size: 20px; /* Smaller icon on tablets */
+        padding: 3px;
+    }
+}
+
+@media (max-width: 480px) {
+    .homepage-header {
+        padding: 3px 6px; /* Even smaller padding on phones */
+        height: 28px; /* Even smaller height on phones */
+    }
+
+    .logo {
+        height: 18px; /* 60% of 30px */
+    }
+
+    .profile-button {
+        font-size: 18px; /* Even smaller icon on phones */
+        padding: 2px;
+    }
+}

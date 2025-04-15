@@ -1,0 +1,146 @@
+/* Main container for the homepage, whiskey lounge background */
+.homepage {
+  padding: 0;
+  color: #f4e4bc;
+  min-height: 100vh;
+  background-color: #1a0d06;
+  background-image: url("https://www.transparenttextures.com/patterns/dark-wood.png");
+  background-repeat: repeat;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Header with logo and profile button */
+.homepage-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #2b1a0f;
+  border-bottom: 2px solid #d4a017;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Logo styling */
+.logo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Shelves container */
+.shelves-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px 20px;
+  margin-top: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Each shelf section, styled like a wooden shelf */
+.shelf {
+  position: relative;
+  min-height: 180px;
+  background-color: #3a2311;
+  background-image: url("https://www.transparenttextures.com/patterns/dark-wood.png");
+  border-radius: 0;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.8), inset 0 -10px 20px rgba(0, 0, 0, 0.5);
+  padding: 10px 10px 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Shelf label (golden engraved metal below the cards) */
+.shelf-label {
+  position: relative;
+  margin-top: 2px;
+  align-self: flex-start;
+  background: linear-gradient(145deg, #e6b800, #b38613);
+  color: #2b1a0f;
+  padding: 5px 15px;
+  font-family: 'Georgia', serif;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: 2px solid #3a2311;
+  border-radius: 4px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), -1px -1px 1px rgba(255, 255, 255, 0.2);
+}
+
+/* Nail head on the left side of the label */
+.shelf-label::before {
+  content: "";
+  position: absolute;
+  left: 4px; /* Position outside the left border */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px; /* Size of the nail head */
+  height: 6px;
+  background: radial-gradient(circle, #c0c0c01a, #2e2603); /* Silver metallic look */
+  border-radius: 50%;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), inset 1px 1px 1px rgba(255, 255, 255, 0.3); /* 3D effect */
+}
+
+/* Nail head on the right side of the label */
+.shelf-label::after {
+  content: "";
+  position: absolute;
+  right: 4px; /* Position outside the right border */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  background: radial-gradient(circle, #c0c0c01a, #2e2603);
+  border-radius: 50%;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), inset 1px 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+/* Horizontal scrolling for bottle list */
+.bottle-list {
+  display: flex;
+  justify-content: flex-start;
+  overflow-x: auto;
+  gap: 5px;
+  padding: 2px 0 1px;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  background: none;
+}
+
+/* Hide the scrollbar but keep it functional */
+.bottle-list::-webkit-scrollbar {
+  display: none;
+}
+
+/* Add shelf bottom shadow */
+.shelf::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 15px;
+  background-color: #2b1a0f;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+  z-index: -1;
+}
+
+/* Add subtle lighting effect */
+.shelf::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.4), transparent);
+}

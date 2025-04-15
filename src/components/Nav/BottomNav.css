@@ -1,0 +1,27 @@
+/* Fixed navigation bar at the bottom */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: #4a2e15; /* Matches shelf footer wood tone */
+    padding: 10px 0;
+    border-top: 1px solid #d4a017; /* Gold accent */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+  }
+  
+  /* Navigation item styling */
+  .nav-item {
+    color: #f4e4bc; /* Amber text */
+    text-decoration: none;
+    font-family: 'Georgia', serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: color 0.3s;
+  }
+  
+  .nav-item:hover {
+    color: #d4a017; /* Gold on hover */
+  }
