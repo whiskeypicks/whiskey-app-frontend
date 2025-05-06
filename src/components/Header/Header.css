@@ -1,69 +1,52 @@
-/* Header with logo and profile button */
-.homepage-header {
+.header {
+    background-color: #3c2f2f; /* Dark wood brown base from logo */
+    background-image: linear-gradient(
+      45deg,
+      #4a3c3c 25%,
+      #3c2f2f 25%,
+      #3c2f2f 50%,
+      #4a3c3c 50%,
+      #4a3c3c 75%,
+      #3c2f2f 75%,
+      #3c2f2f
+    );
+    background-size: 20px 20px; /* Wood grain effect */
+    height: 100px;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 6px 12px; /* Reduced padding to fit smaller height */
-    background-color: #2b1a0f;
-    border-bottom: 2px solid #d4a017;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
-    position: fixed; /* Changed from sticky to fixed */
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 36px; /* Set explicit height to 60% of ~60px */
-    z-index: 100;
-}
-
-/* Logo styling */
-.logo {
-    height: 24px; /* Reduced to fit new header height (60% of 40px) */
-    width: auto;
-    object-fit: contain;
-}
-
-/* Profile button styling */
-.profile-button {
-    color: #f4e4bc; /* Amber color to match the theme */
-    font-size: 24px; /* Size of the icon */
-    padding: 8px; /* Smaller padding for the icon */
-    border-radius: 8px;
-    transition: color 0.3s ease;
-}
-
-.profile-button:hover {
-    color: #d4a017; /* Gold on hover */
-}
-
-/* Responsive adjustments for mobile */
-@media (max-width: 768px) {
-    .homepage-header {
-        padding: 5px 10px; /* Slightly smaller padding on tablets */
-        height: 32px; /* Slightly smaller height on tablets */
-    }
-
-    .logo {
-        height: 30px; /* 60% of 35px */
-    }
-
-    .profile-button {
-        font-size: 20px; /* Smaller icon on tablets */
-        padding: 3px;
-    }
-}
-
-@media (max-width: 480px) {
-    .homepage-header {
-        padding: 3px 6px; /* Even smaller padding on phones */
-        height: 28px; /* Even smaller height on phones */
-    }
-
-    .logo {
-        height: 18px; /* 60% of 30px */
-    }
-
-    .profile-button {
-        font-size: 18px; /* Even smaller icon on phones */
-        padding: 2px;
-    }
-}
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border-bottom: 2px solid #d4a017; /* Gold-orange accent from logo */
+  }
+  
+  .header-content {
+    display: flex;
+    align-items: center;
+    color: #d4a017; /* Gold-orange text to match logo */
+  }
+  
+  .logo {
+    height: 80px;
+    margin-right: 15px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    font-family: 'Georgia', serif; /* Matches the elegant logo font */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    color: #d4a017; /* Gold-orange */
+  }
+  
+  .header-content::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 2px;
+    background: linear-gradient(to right, #d4a017, #1a3c3c, #d4a017); /* Gold to teal gradient */
+    opacity: 0.7;
+  }

@@ -1,28 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
-import { FaArrowLeft, FaUser } from 'react-icons/fa';
 import './Header.css';
 
-function Header({ showLogo = true, showProfile = true, showBack = false }) {
-  const navigate = useNavigate();
-
+const Header = () => {
   return (
-    <header className="homepage-header">
-      {showBack ? (
-        <button onClick={() => navigate(-1)} className="back-button">
-          <FaArrowLeft />
-        </button>
-      ) : (
-        showLogo && <img src="/images/logo.png" alt="Whiskey Picks Logo" className="logo" />
-      )}
-      {showProfile && (
-        <Link to="/profile" className="profile-button">
-          <FaUser />
-        </Link>
-      )}
+    <header className="header">
+      <div className="header-content">
+        <img src="/images/Main Logo.png" alt="Pick Your Pour Logo" className="logo" />
+        <h1>Pick Your Pour</h1>
+      </div>
     </header>
   );
-}
+};
 
 export default Header;
+

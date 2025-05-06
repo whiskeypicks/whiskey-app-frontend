@@ -6,22 +6,27 @@
     right: 0;
     display: flex;
     justify-content: space-around;
-    background-color: #4a2e15; /* Matches shelf footer wood tone */
+    background-color: #1a0d06; /* Matches shelf footer wood tone */
+    background-image: url("https://www.transparenttextures.com/patterns/dark-wood.png");
+    background-repeat: repeat;
     padding: 10px 0;
     border-top: 1px solid #d4a017; /* Gold accent */
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3); /* Shadow for depth */
   }
   
-  /* Navigation item styling */
-  .nav-item {
-    color: #f4e4bc; /* Amber text */
-    text-decoration: none;
-    font-family: 'Georgia', serif;
-    font-size: 14px;
-    text-transform: uppercase;
-    transition: color 0.3s;
-  }
-  
-  .nav-item:hover {
-    color: #d4a017; /* Gold on hover */
-  }
+/* Navigation item styling */
+.nav-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px; /* Ensure touch target size */
+  height: 48px; /* Ensure touch target size */
+  color: #2E5A5A; /* Muted teal to match logo's secondary color */
+  text-decoration: none;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.nav-item:hover {
+  color: #e6b800; /* Gold on hover to match logo */
+  transform: scale(1.1); /* Subtle scale effect for interactivity */
+}

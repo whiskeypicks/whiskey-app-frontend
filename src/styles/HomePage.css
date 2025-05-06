@@ -1,50 +1,70 @@
+/* Hide scrollbar on the entire page */
+html, body {
+  overflow-y: hidden;
+  margin: 0;
+  padding: 0;
+}
+
 /* Main container for the homepage, whiskey lounge background */
 .homepage {
   padding: 0;
-  color: #f4e4bc;
+  color: #f4e4bc; /* Light beige text for readability on dark background */
   min-height: 100vh;
-  background-color: #1a0d06;
+  background-color: #1a0d06; /* Dark brown background */
   background-image: url("https://www.transparenttextures.com/patterns/dark-wood.png");
   background-repeat: repeat;
   display: flex;
   flex-direction: column;
-  position: relative;
   overflow-x: hidden;
+  overflow-y: hidden; /* Hide vertical scrollbar on the page */
 }
 
-/* Header with logo and profile button */
+/* Header Frame (fixed height, dynamic width, sticky) */
 .homepage-header {
+  height: 80px; /* Fixed height, increased to accommodate logo + tagline */
+  width: 100%; /* Dynamic width */
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: #2b1a0f;
-  border-bottom: 2px solid #d4a017;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+  background-color: #2b1a0f; /* Darker wood tone */
+  border-bottom: 2px solid #d4a017; /* Gold border to match logo */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7); /* Subtle shadow for depth */
   position: sticky;
   top: 0;
   z-index: 100;
 }
 
-/* Logo styling */
+/* Logo styling (placeholder for now, will adjust in Header.css) */
 .logo {
   height: 40px;
   width: auto;
   object-fit: contain;
 }
 
-/* Shelves container */
+/* Main Frame (dynamic height and width, fills space) */
 .shelves-container {
+  flex: 1; /* Grow to fill available space between header and footer */
+  width: 100%; /* Dynamic width */
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  padding: 40px 20px;
-  margin-top: 20px;
+  gap: 25px;
+  padding: 25px;
+  margin-top: 0;
+  margin-bottom: 0;
   position: relative;
-  overflow: hidden;
+  overflow-y: auto; /* Allows vertical scrolling */
+  overflow-x: hidden;
+  -ms-overflow-style: none; /* Hide scrollbar in Edge */
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
 }
 
-/* Each shelf section, styled like a wooden shelf */
+/* Hide the vertical scrollbar in Chrome/Safari */
+.shelves-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Each shelf section (inside Main Frame, keeping as-is for now) */
 .shelf {
   position: relative;
   min-height: 180px;
@@ -62,14 +82,14 @@
   position: relative;
   margin-top: 2px;
   align-self: flex-start;
-  background: linear-gradient(145deg, #e6b800, #b38613);
-  color: #2b1a0f;
+  background: linear-gradient(145deg, #e6b800, #b38613); /* Gold gradient from logo */
+  color: #2b1a0f; /* Dark text on gold background */
   padding: 5px 15px;
-  font-family: 'Georgia', serif;
+  font-family: 'Georgia', serif; /* Serif font to match logo */
   font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
-  border: 2px solid #3a2311;
+  border: 2px solid #3a2311; /* Dark wood border */
   border-radius: 4px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(0, 0, 0, 0.3);
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), -1px -1px 1px rgba(255, 255, 255, 0.2);
@@ -79,21 +99,21 @@
 .shelf-label::before {
   content: "";
   position: absolute;
-  left: 4px; /* Position outside the left border */
+  left: 4px;
   top: 50%;
   transform: translateY(-50%);
-  width: 6px; /* Size of the nail head */
+  width: 6px;
   height: 6px;
-  background: radial-gradient(circle, #c0c0c01a, #2e2603); /* Silver metallic look */
+  background: radial-gradient(circle, #c0c0c01a, #2e2603); /* Muted teal to match logo accents */
   border-radius: 50%;
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), inset 1px 1px 1px rgba(255, 255, 255, 0.3); /* 3D effect */
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), inset 1px 1px 1px rgba(255, 255, 255, 0.3);
 }
 
 /* Nail head on the right side of the label */
 .shelf-label::after {
   content: "";
   position: absolute;
-  right: 4px; /* Position outside the right border */
+  right: 4px;
   top: 50%;
   transform: translateY(-50%);
   width: 6px;
@@ -120,7 +140,6 @@
 .bottle-list::-webkit-scrollbar {
   display: none;
 }
-
 /* Add shelf bottom shadow */
 .shelf::after {
   content: "";
@@ -143,4 +162,34 @@
   right: 0;
   height: 5px;
   background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.4), transparent);
+}
+
+/* Footer Frame (fixed height, dynamic width, sticky) */
+.bottom-nav {
+  height: 45px; /* Reduced for mobile */
+  width: 100%; /* Dynamic width */
+  background-color: #3a2311; /* Dark wood tone to match logo */
+  background-image: url("https://www.transparenttextures.com/patterns/dark-wood.png"); /* Wood texture from logo */
+  background-repeat: repeat;
+  border-top: 2px solid transparent; /* Use gradient for border */
+  border-image: linear-gradient(145deg, #e6b800, #b38613) 1; /* Gold gradient border */
+  box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.7), inset 0 2px 5px rgba(255, 215, 0, 0.2); /* Shadow and subtle gold lighting */
+  position: sticky;
+  bottom: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 10px;
+}
+
+/* Add subtle lighting effect on top of the footer */
+.bottom-nav::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.3), transparent); /* Subtle gold glow */
 }
