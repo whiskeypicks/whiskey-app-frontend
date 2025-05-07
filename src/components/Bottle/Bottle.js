@@ -17,7 +17,7 @@ const image = bottle?.official_image_path || defaultImages[Math.floor(Math.rando
 const bottleName = bottle?.name || name;
 
 return (
-  <Link to={`/bottle/${bottle?.barcode || name}`} className="bottle">
+  <Link to={`/bottle/${bottle?.barcode || name}`} className="bottle-card">
     <img src={image} alt={bottleName} className="bottle-image" />
     <p className="bottle-name">{bottleName}</p>
   </Link>
