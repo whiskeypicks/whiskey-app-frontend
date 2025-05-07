@@ -2,7 +2,7 @@
 .bottle {
   display: flex;
   flex-direction: column;
-  align-items: center W;
+  align-items: center;
   justify-content: space-between;
   width: 93px; /* Adjusted for 3.5 cards in a 390px viewport */
   height: 200px; /* Adjusted for 2.75 shelves in a 700px viewport */
