@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import BottleDetailsPage from './pages/BottleDetailsPage';
 import './styles/App.css';
+import './styles/variables.css';
 
 function App() {
   return (

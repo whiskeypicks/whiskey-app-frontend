@@ -37,17 +37,19 @@ function HomePage() {
       <Header showLogo={true} showProfile={true} />
       <div className="shelves-container">
         {shelves.map((shelf, index) => (
-          <div key={index} className="shelf">
-            <div className="bottle-list">
-              {shelf.title === 'My Bar' ? (
-                shelf.bottles.map((bottle) => (
-                  <Bottle key={bottle.barcode} bottle={bottle} />
-                ))
-              ) : (
-                shelf.bottles.map((bottle, bottleIndex) => (
-                  <Bottle key={bottleIndex} name={bottle} />
-                ))
-              )}
+          <div>
+            <div key={index} className="shelf">
+              <div className="bottle-list">
+                {shelf.title === 'My Bar' ? (
+                  shelf.bottles.map((bottle) => (
+                    <Bottle key={bottle.barcode} bottle={bottle} />
+                  ))
+                ) : (
+                  shelf.bottles.map((bottle, bottleIndex) => (
+                    <Bottle key={bottleIndex} name={bottle} />
+                  ))
+                )}
+              </div>
             </div>
             <div className="shelf-label">{shelf.title}</div>
           </div>
