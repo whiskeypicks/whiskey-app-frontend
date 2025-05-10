@@ -1,52 +1,30 @@
+/* Header.css */
 .header {
-    background-color: #3c2f2f; /* Dark wood brown base from logo */
-    background-image: linear-gradient(
-      45deg,
-      #4a3c3c 25%,
-      #3c2f2f 25%,
-      #3c2f2f 50%,
-      #4a3c3c 50%,
-      #4a3c3c 75%,
-      #3c2f2f 75%,
-      #3c2f2f
-    );
-    background-size: 20px 20px; /* Wood grain effect */
-    height: 100px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    border-bottom: 2px solid #d4a017; /* Gold-orange accent from logo */
-  }
-  
-  .header-content {
-    display: flex;
-    align-items: center;
-    color: #d4a017; /* Gold-orange text to match logo */
-  }
-  
-  .logo {
-    height: 80px;
-    margin-right: 15px;
-  }
-  
-  h1 {
-    font-size: 2rem;
-    font-family: 'Georgia', serif; /* Matches the elegant logo font */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-    color: #d4a017; /* Gold-orange */
-  }
-  
-  .header-content::after {
-    content: '';
-    position: absolute;
-    bottom: 5px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60%;
-    height: 2px;
-    background: linear-gradient(to right, #d4a017, #1a3c3c, #d4a017); /* Gold to teal gradient */
-    opacity: 0.7;
-  }
+  background-color: #1a0d06; /* Dark brown fallback */
+  background-image: url('../../assets/images/wood_grain.png');; /* Local wood texture */
+  background-repeat: repeat; 
+  padding: 1px;
+  text-align: center;
+  height: var(--nav-bar-height);
+  display: flex; /* Use flexbox for icon and title alignment */
+  justify-content: space-between; /* Space out icons and title */
+  align-items: center; /* Vertically center items */
+}
+
+.header h1 {
+  color: #d4a017;
+  margin: 0;
+  font-size: 2em; /* Double the default size (approx. 2x base h1 size) */
+  flex-grow: 1; /* Allow title to take available space */
+}
+
+.header-icon {
+  height: 50px; /* Adjust size to match mockup; tweak as needed */
+  margin-left: 10px;
+}
+
+.profile-icon {
+  height: 32px; 
+  margin-right: 15px;
+  cursor: pointer; /* Indicate it’s clickable */
+}

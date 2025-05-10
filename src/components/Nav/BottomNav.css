@@ -4,11 +4,11 @@
     bottom: 0;
     left: 0;
     right: 0;
-    height: var(--bottom-nav-height);;
+    height: var(--nav-bar-height);;
     display: flex;
     justify-content: space-around;
     background-color: #1a0d06; /* Matches shelf footer wood tone */
-    background-image: url("https://www.transparenttextures.com/patterns/dark-wood.png");
+    background-image: url('../../assets/images/wood_grain.png');
     background-repeat: repeat;
     box-sizing: border-box;
     border-top: 1px solid #d4a017; /* Gold accent */

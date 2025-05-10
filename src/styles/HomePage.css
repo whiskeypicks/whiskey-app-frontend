@@ -47,10 +47,13 @@ html, body {
   display: flex;
   flex-direction: column;
   padding: 8px;
+  padding-top: 0px;
   padding-bottom: var(--bottom-nav-height);
   margin-top: 0;
   margin-bottom: 0;
   position: relative;
+  background-color: #1a0d06;
+  background-image: url('../assets/images/wood_grain.png');
   overflow-y: auto; /* Allows vertical scrolling */
   overflow-x: hidden;
   -ms-overflow-style: none; /* Hide scrollbar in Edge */
@@ -65,7 +68,9 @@ html, body {
 /* Each shelf section (inside Main Frame, keeping as-is for now) */
 .shelf {
   position: relative;
-  background-color: #1a0d06;
+  background-color: #917334;
+  background-image: url('../assets/images/wood_grain.png');
+  background-repeat: repeat;
   border-radius: 0;
   padding: 10px 10px 10px;
   display: flex;
@@ -75,17 +80,17 @@ html, body {
 /* Shelf label (golden engraved metal below the cards) */
 .shelf-label {
   position: relative;
-  margin-top: 2px;
+  margin-top: 1px;
   width: fit-content;
   align-self: flex-start;
   background: linear-gradient(145deg, #e6b800, #b38613); /* Gold gradient from logo */
   color: #2b1a0f; /* Dark text on gold background */
-  padding: 5px 15px;
+  padding: 1px 15px;
   font-family: 'Georgia', serif; /* Serif font to match logo */
   font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
-  border: 2px solid #3a2311; /* Dark wood border */
+  border: 3px solid #3a2311; /* Dark wood border */
   border-radius: 4px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(0, 0, 0, 0.3);
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), -1px -1px 1px rgba(255, 255, 255, 0.2);

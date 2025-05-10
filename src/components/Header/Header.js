@@ -1,13 +1,15 @@
+// Header.js
 import React from 'react';
+import headerIcon from '../../assets/images/header_icon.png';
+import profileIcon from '../../assets/images/profile_icon.svg';
 import './Header.css';
 
 const Header = () => {
   return (
     <header className="header">
-      <div className="header-content">
-        <img src="/images/Main Logo.png" alt="Pick Your Pour Logo" className="logo" />
-        <h1>Pick Your Pour</h1>
-      </div>
+      <img src={headerIcon} alt="Header Icon" className="header-icon" />
+    <h1>Pick Your Pour</h1>
+     <img src={profileIcon} alt="Profile Icon" className="profile-icon" />
     </header>
   );
 };
