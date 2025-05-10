@@ -14,7 +14,7 @@
 .header h1 {
   color: #d4a017;
   margin: 0;
-  font-size: 1.25em; /* Double the default size (approx. 2x base h1 size) */
+  font-size: 2em; /* Double the default size (approx. 2x base h1 size) */
   flex-grow: 1; /* Allow title to take available space */
 }
 
